@@ -62,10 +62,13 @@ function grabFormDataAndSend(event) {
     genre,
     cover_url,
     description,
-    authorsId
+    authorsId: authorsId.toString()
   };
   if (validateForm(form)) {
-    $.post('http://localhost:3000/books/new', form);
+    $.post('http://localhost:3000/books/new', form)
+      .then(result => {
+        console.log(result);
+      });
     $('#successMsg').text('Book Added!').show();
   }
 }

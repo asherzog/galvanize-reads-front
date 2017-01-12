@@ -12,3 +12,11 @@
   max-height: 17em;
   margin-right: 2em;
 }
+.editDelete {
+  display: flex;
+  flex-direction: row;
+}
+.editDelete a {
+  height: 3em;
+  width: 6em;
+}

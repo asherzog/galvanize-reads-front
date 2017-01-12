@@ -27,14 +27,18 @@ function displayResults(results) {
         <div class="panel-heading">
           <h1 class="panel-title text-center">${book.title}</h1>
         </div>
-        <div class="panel-body">
-          <div id="coverPic">
+        <div class="panel-body row">
+          <div id="coverPic" col-xs-3>
             <img src="${book.cover_url}">
           </div>
-          <div>
+          <div col-xs-7>
             <h4>By: ${authors}</h4>
             <h6>${book.genre}</h6>
             <p>${book.description}</p>
+          </div>
+          <div class="editDelete col-xs-2">
+            <a href="/edit.html?id=${book.id}" class="btn btn-warning">Edit</a>
+            <a href="/delete.html?id=${book.id}" class="btn btn-danger">Remove</a>
           </div>
         </div>
       </div>
