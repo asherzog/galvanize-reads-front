@@ -8,32 +8,6 @@ $(() => {
   $('#submitBtn').click(grabFormDataAndSend);
 });
 
-function getAuthors() {
-  return $.get(`${API_URL}/authors`);
-}
-
-function getAuthorNames(result) {
-  let authors = [];
-  let ids = [];
-  result.forEach(author => {
-    authors.push(`${author.last_name}, ${author.first_name}`);
-    ids.push(author.id);
-  });
-  let authorInfo = {
-    authors,
-    ids
-  };
-  return authorInfo;
-}
-
-function appendAuthorsToSelect(authorInfo) {
-  for (var i = 0; i < authorInfo.authors.length; i++) {
-    $('#authorList').append(`
-      <option value="${authorInfo.ids[i]}">${authorInfo.authors[i]}</option>
-      `);
-  }
-}
-
 function addAuthorToList(event) {
   event.preventDefault();
   let authorId = $('#authorList').val();
