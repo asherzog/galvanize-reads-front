@@ -4,3 +4,11 @@
 .navbar-brand {
   margin-bottom: 1.75em;
 }
+.panel-body {
+  display: flex;
+  flex-direction: row;
+}
+#coverPic img {
+  max-height: 15em;
+  margin-right: 2em;
+}
