@@ -25,7 +25,7 @@ function displayResults(results) {
     $('#booksHere').append(`
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">${book.title}</h3>
+          <h1 class="panel-title text-center">${book.title}</h1>
         </div>
         <div class="panel-body">
           <div id="coverPic">

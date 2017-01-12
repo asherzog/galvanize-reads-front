@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Galvanize Reads</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">
+              <img alt="Galvanize" src="https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/744/s300/1982192-823446997671475-891607919-n.png">
+            </a>
+            <h1 class="navbar-text">Galvanize Reads</h1>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="alert alert-danger text-center" role="alert" id="errorMsg" style="display: none"></div>
+      <div class="alert alert-success text-center" role="alert" id="successMsg" style="display: none"></div>
+      <form class="col-md-6 col-md-offset-2">
+        <div class="col-md-11">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" placeholder="" required>
+          </div>
+          <div class="form-group">
+            <label for="genre">Genre</label>
+            <input type="text" class="form-control" id="genre" placeholder="" required>
+          </div>
+          <div class="form-group">
+            <label for="cover">Cover Image URL</label>
+            <input type="text" class="form-control" id="cover" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" rows="3" id="description" placeholder=""></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-9">
+          <label for="authors">Authors</label>
+          <select multiple class="form-control" id="authors">
+          </select>
+          </div>
+          <button type="button" class="btn btn-danger col-md-2" name="button" id="removeBtn" style="margin-top: 2em;">remove</button>
+          <div class="col-md-7" style="margin-top: 0.5em;">
+            <select class="form-control" id="authorList">
+            </select>
+          </div>
+          <button type="button" class="btn btn-success col-md-4" style="margin-top: 0.5em;" name="button" id="authorBtn">Add Author</button>
+        </div>
+      </form>
+      <button type="button" class="btn-lg btn-primary col-md-3 col-md-offset-3" style="margin-top: 0.5em;" name="button" id="submitBtn">Submit</button>
+    </main>
+  </body>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="/scripts/newBook.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="/main.css">
+</html>
