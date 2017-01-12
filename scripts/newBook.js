@@ -9,7 +9,7 @@ $(() => {
 });
 
 function getAuthors() {
-  return $.get('http://localhost:3000/authors');
+  return $.get(`${API_URL}/authors`);
 }
 
 function getAuthorNames(result) {
@@ -65,7 +65,7 @@ function grabFormDataAndSend(event) {
     authorsId: authorsId.toString()
   };
   if (validateForm(form)) {
-    $.post('http://localhost:3000/books/new', form)
+    $.post(`${API_URL}/books/new`, form)
       .then(result => {
         console.log(result);
       });

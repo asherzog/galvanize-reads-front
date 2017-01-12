@@ -4,7 +4,7 @@ $(() => {
 });
 
 function getBooks() {
-  return $.get('http://localhost:3000/books');
+  return $.get(`${API_URL}/books`);
 }
 
 function displayResults(results) {
