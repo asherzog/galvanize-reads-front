@@ -42,6 +42,7 @@ function grabFormDataAndSend(event) {
     $.post(`${API_URL}/books/new`, form)
       .then(result => {
         console.log(result);
+        window.location = '/books.html'
       });
     $('#successMsg').text('Book Added!').show();
   }
